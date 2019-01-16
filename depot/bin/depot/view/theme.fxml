@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="containerTheme" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="depot.view.ControllerTheme">
+   <children>
+      <TableView fx:id="themeTable" layoutX="16.0" layoutY="45.0" prefHeight="404.0" prefWidth="343.0">
+        <columns>
+          <TableColumn fx:id="idTheme" prefWidth="50.0" resizable="false" text="ID" />
+          <TableColumn fx:id="libelleTheme" onEditCommit="#editTheme" prefWidth="292.0" text="Theme(s)" />
+        </columns>
+      </TableView>
+      <Label layoutX="16.0" layoutY="14.0" text="Theme">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button layoutX="430.0" layoutY="88.0" mnemonicParsing="false" onAction="#deleteTheme" text="Supprimer" />
+      <Button layoutX="291.0" layoutY="461.0" mnemonicParsing="false" onAction="#addTheme" text="Ajouter" />
+      <TextField fx:id="inputLibelle" layoutX="105.0" layoutY="461.0" />
+   </children>
+</AnchorPane>

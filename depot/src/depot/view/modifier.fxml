@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="editContainer" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ComboBox fx:id="inputTitre" editable="true" layoutX="254.0" layoutY="89.0" prefHeight="25.0" prefWidth="240.0" />
+      <Label layoutX="203.0" layoutY="93.0" text="Titre" />
+      <Label layoutX="203.0" layoutY="135.0" text="ISBN" />
+      <Label layoutX="202.0" layoutY="181.0" text="Date" />
+      <Label layoutX="192.0" layoutY="221.0" text="Auteur(s)" />
+      <TextField fx:id="inputDate" layoutX="255.0" layoutY="177.0" prefHeight="25.0" prefWidth="55.0" />
+      <TextField fx:id="inputIsbn" layoutX="254.0" layoutY="131.0" />
+      <ListView fx:id="listEditeurs" editable="true" layoutX="254.0" layoutY="338.0" onEditCommit="#editCommitEditeur" prefHeight="97.0" prefWidth="200.0" />
+      <ListView fx:id="listThemes" editable="true" layoutX="254.0" layoutY="453.0" onEditCommit="#editCommitTheme" prefHeight="97.0" prefWidth="200.0" />
+      <Label layoutX="203.0" layoutY="338.0" text="Editeur(s)" />
+      <Label layoutX="203.0" layoutY="453.0" text="Theme(s)" />
+      <Button layoutX="468.0" layoutY="226.0" mnemonicParsing="false" onAction="#insertAuteur" text="+" />
+      <Button layoutX="468.0" layoutY="257.0" mnemonicParsing="false" onAction="#removeAuteur" text="-" />
+      <Button fx:id="editAuteurs" layoutX="468.0" layoutY="288.0" mnemonicParsing="false" text="Edit" />
+      <Button layoutX="466.0" layoutY="343.0" mnemonicParsing="false" onAction="#insertEditeur" text="+" />
+      <Button layoutX="466.0" layoutY="458.0" mnemonicParsing="false" onAction="#insertTheme" text="+" />
+      <Button layoutX="468.0" layoutY="374.0" mnemonicParsing="false" onAction="#removeEditeur" text="-" />
+      <Button layoutX="468.0" layoutY="489.0" mnemonicParsing="false" onAction="#removeTheme" text="-" />
+      <Button fx:id="editThemes" layoutX="462.0" layoutY="525.0" mnemonicParsing="false" text="Edit" />
+      <Button fx:id="editEditeurs" layoutX="468.0" layoutY="410.0" mnemonicParsing="false" text="Edit" />
+      <ListView fx:id="listAuteurs" editable="true" layoutX="254.0" layoutY="218.0" onEditCommit="#editCommitAuteur" prefHeight="97.0" prefWidth="200.0" />
+   	</children>
+</AnchorPane>
+
